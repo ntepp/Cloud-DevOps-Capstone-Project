@@ -6,7 +6,7 @@ pipeline {
                  sh 'echo "started"'
              }
          }
-		 stage('Lint HTML') {
+		 stage('Run Test') {
               steps {
                   sh 'tidy -q -e roles/nginx/templates/*.html'
               }
