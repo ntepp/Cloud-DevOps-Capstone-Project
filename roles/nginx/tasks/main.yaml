@@ -13,7 +13,7 @@
 - name: Generate index.html
   template:
       src: index.html
-      dest: /var/www/html/index.html
+      dest: /usr/share/nginx/html/hello.html
       owner: root
       group: root
       mode: 0744
@@ -23,5 +23,3 @@
     daemon_reload: yes
     enabled: yes
     state: started
-  environment:
-    PATH: /etc/init.d/nginx 
