@@ -3,8 +3,13 @@ pipeline {
      stages {
          stage('Build') {
              steps {
-                 sh 'echo "Entry step"'
+                 sh 'echo "started"'
              }
          }
+		 stage('Lint HTML') {
+              steps {
+                  sh 'tidy -q -e roles/nginx/templates/*.html'
+              }
+         } 
      }
 }
