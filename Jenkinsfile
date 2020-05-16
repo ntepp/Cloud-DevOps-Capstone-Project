@@ -6,10 +6,14 @@ pipeline {
                  sh 'echo "started"'
              }
          }
-		 stage('Lint Test') {
+		 stage('Lint Html') {
               steps {
                   sh 'tidy -q -e roles/nginx/templates/*.html'
-				  sh hadolint Dockerfile
+              }
+         }
+		 stage('Lint Dockerfile') {
+              steps {
+                  sh hadolint Dockerfile
               }
          }
      }
