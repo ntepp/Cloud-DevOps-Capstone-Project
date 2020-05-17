@@ -13,7 +13,7 @@ pipeline {
          }
 		 stage('Lint Dockerfile') {
               steps {
-                  sh '/home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'
+                  sh 'sudo /home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'
               }
          }
      }
